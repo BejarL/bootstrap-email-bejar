@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+/* Top Search Bar */
+.bg-light {
+    background-color: #fff !important;
+}
+
+input[type="text"] {
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+/* Left Sidebar */
+.list-group-item {
+    cursor: pointer;
+    border-left: 4px solid transparent;
+}
+
+.list-group-item:hover {
+    background-color: #f0f0f0;
+    border-left: 4px solid #007bff;
+}
+
+.list-group-item.active {
+    background-color: #007bff;
+    color: white;
+    border-left: 4px solid #007bff;
+}
+
+/* Email List */
+.list-group-item-action {
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.list-group-item-action:last-child {
+    border-bottom: none;
+}
+
+/* Email Details */
+.p-3 {
+    padding: 20px !important;
+}
+
+button.btn-light {
+    border: 1px solid #ccc;
+}
+
+@media screen and (max-width: 992px) {
+    /* For tablets and below */
+    .d-lg-none {
+        display: block !important;
+    }
+
+    .d-none.d-lg-block {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* For mobile devices */
+    .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
