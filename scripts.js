@@ -4,17 +4,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Toggle sidebar visibility on hamburger icon click
     menuToggle.addEventListener('click', function () {
-        if (sidebar.classList.contains('d-none')) {
-            sidebar.classList.remove('d-none');
+        if (sidebar.classList.contains('show-sidebar')) {
+            sidebar.classList.remove('show-sidebar');
         } else {
-            sidebar.classList.add('d-none');
+            sidebar.classList.add('show-sidebar');
         }
     });
 
     // Close the sidebar when clicking outside of it
     document.addEventListener('click', function (event) {
         if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
-            sidebar.classList.add('d-none');
+            sidebar.classList.remove('show-sidebar');
         }
     });
 
