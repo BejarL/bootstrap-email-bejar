@@ -1,66 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Template</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Email App Mockup</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
 
-<div class="container-fluid">
-    <div class="row">
-
-        <!-- Top Bar -->
-        <div class="bg-light py-2 px-3 w-100">
-            <button class="btn btn-light" id="menu-toggle">&#9776;</button>
-            <input type="text" class="form-control d-inline-block" placeholder="Search" style="max-width: 60%;">
-            <span class="float-end">&#9881; &#128276;</span>
-        </div>
-
-        <!-- Left Sidebar -->
-        <button class="btn btn-light" id="menu-toggle">&#9776;</button>
-        <div class="col-3 bg-light d-none d-lg-block" id="Sidebar">
-            <button class="btn btn-primary mt-3 mb-2">Compose</button>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Inbox</li>
-                <li class="list-group-item">Sent</li>
-                <li class="list-group-item">Drafts</li>
-                <li class="list-group-item">Trash</li>
-            </ul>
-        </div>
-
-        <!-- Middle Content (Email List) -->
-        <div class="col-9 col-lg-3">
-            <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Sender Name</h5>
-                    </div>
-                    <small>Email subject here...</small>
-                </a>
+    <div class="container-fluid mt-3">
+        <div class="header-row">
+            <i class="fas fa-envelope app-logo"></i>
+            <div class="search-container">
+                <input type="text" class="form-control mb-3" placeholder="Search">
             </div>
         </div>
 
-        <!-- Right Content (Email Details) -->
-        <div class="col-12 col-lg-6 bg-light">
-            <div class="p-3">
-                <h5>Email subject here...</h5>
-                <div class="d-flex justify-content-between mb-2">
-                    <span><strong>Sender Name</strong></span>
-                    <span>To: Receiver</span>
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-md-4 d-none d-md-block">
+                <button class="btn btn-primary mb-3 w-100">
+                    <i class="fas fa-edit mr-2"></i> Compose
+                </button>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        <i class="fas fa-inbox mr-2"></i> Inbox
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fas fa-paper-plane mr-2"></i> Sent
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fas fa-file-alt mr-2"></i> Drafts
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fas fa-trash mr-2"></i> Trash
+                    </a>
                 </div>
-                <p>Lorem ipsum content of the email...</p>
-                <button class="btn btn-light">Reply</button>
-                <button class="btn btn-light">Forward</button>
+            </div>
+
+            <!-- Inbox List -->
+            <div class="col-lg-3 col-md-4">
+                <div class="inbox-wrapper">
+                    <div class="inbox-header mb-3 d-flex align-items-center justify-content-between">
+                        <h3>Inbox</h3>
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <!-- The inbox items will be populated by the JavaScript -->
+                </div>
+            </div>
+
+            <!-- Email Content -->
+            <div class="col-lg-6 col-md-4">
+                <div class="email-content">
+                    <span class="close-btn">&times;</span>
+                    <h4>Email subject here...</h4>
+                    <p>Greetings!</p>
+                    <p>Lorem ipsum ...</p>
+                </div>
+            </div>
+
+            <!-- Bottom bar for devices with width <= 834px -->
+            <div class="d-md-none fixed-bottom bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center py-2">
+                            <a href="#"><i class="fas fa-edit"></i></a>
+                        </div>
+                        <div class="col text-center py-2">
+                            <a href="#" class="active"><i class="fas fa-inbox"></i></a>
+                        </div>
+                        <div class="col text-center py-2">
+                            <a href="#"><i class="fas fa-paper-plane"></i></a>
+                        </div>
+                        <div class="col text-center py-2">
+                            <a href="#"><i class="fas fa-file-alt"></i></a>
+                        </div>
+                        <div class="col text-center py-2">
+                            <a href="#"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="scripts.js"></script>
+    <!-- Link to the external JavaScript libraries and your script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>

@@ -1,87 +1,169 @@
+/* ========== General Styles ========== */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #EFDFA5;
 }
 
-.container-fluid {
-    padding: 0;
-    margin: 0;
-}
-
-/* Top Search Bar */
-.bg-light {
-    background-color: #fff !important;
-}
-
-input[type="text"] {
-    border-radius: 15px;
-    border: 1px solid #ccc;
-}
-
-/* Left Sidebar */
-.list-group-item {
-    cursor: pointer;
-    border-left: 4px solid transparent;
-}
-/* Slide in/out styles */
-#sidebar {
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    z-index: 1000;  /* Ensure the sidebar appears above other content */
-}
-
-#sidebar.show-sidebar {
-    transform: translateX(0);
-}
-
-.list-group-item:hover {
-    background-color: #f0f0f0;
-    border-left: 4px solid #007bff;
-}
-
-.list-group-item.active {
-    background-color: #007bff;
-    color: white;
-    border-left: 4px solid #007bff;
-}
-
-/* Email List */
-.list-group-item-action {
+.form-control {
     border: none;
-    border-bottom: 1px solid #e5e5e5;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 500px; 
+    margin: 0 auto;
 }
 
-.list-group-item-action:last-child {
+.form-control:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== Component Styles ========== */
+
+/* --- Logo and Search Bar --- */
+.header-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.app-logo {
+    font-size: 40px;
+    color: #333;
+    position: absolute;
+    left: 10px;
+}
+
+.search-container {
+    text-align: center;
+    width: 100%;
+}
+
+/* --- Sidebar --- */
+.list-group {
+    background-color: #F4E9BE;
+    border-radius: 5px;
+    margin-bottom: 24px;
+}
+
+.list-group-item {
+    background-color: #F4E9BE;
+    border: none;
+    border-top: none;
+    color: black;
+}
+
+.list-group-item:last-child {
     border-bottom: none;
 }
 
-/* Email Details */
-.p-3 {
-    padding: 20px !important;
+.list-group-item i {
+    color: black;
 }
 
-button.btn-light {
-    border: 1px solid #ccc;
+.btn-primary {
+    background-color: #F4E9BE;
+    border: none;
+    color: #333;
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    font-size: 18px;
+    padding: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
 }
 
-@media screen and (max-width: 992px) {
-    /* For tablets and below */
-    .d-lg-none {
-        display: block !important;
+.btn-primary i {
+    color: black;
+}
+
+/* --- Inbox --- */
+.inbox-item {
+    background-color: #F4E9BE;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inbox-item:hover {
+    background-color: #f7f7f7;
+}
+
+.inbox-wrapper {
+    background-color: #EFDFA5;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.inbox-header {
+    background-color: #F4E9BE;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+}
+
+.inbox-header h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.inbox-header .fa-filter {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* --- Email Content --- */
+.email-content {
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* --- Other --- */
+.col-md-3 {
+    flex: 0 0 20%; 
+    max-width: 15%;
+}
+
+.d-md-none.fixed-bottom.bg-light {
+    background-color: #F4E9BE !important;
+}
+
+.d-md-none.fixed-bottom.bg-light a i {
+    color: black;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 576px) {
+    .form-control {
+        width: 90%;
     }
 
-    .d-none.d-lg-block {
-        display: none !important;
+    .btn-primary {
+        width: 90%;
     }
 }
 
-@media screen and (max-width: 576px) {
-    /* For mobile devices */
-    .container-fluid {
-        padding-left: 10px;
-        padding-right: 10px;
+@media (max-width: 834px) {
+    .email-content {
+        display: none;
+    }
+
+    .btn-primary {
+        margin: 10px 0;
+    }
+
+    .list-group-item {
+        flex-grow: 1;
     }
 }
