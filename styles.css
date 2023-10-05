@@ -1,4 +1,4 @@
-/* ========== General Styles ========== */
+/* General Styles */
 body {
     background-color: #EFDFA5;
 }
@@ -8,7 +8,7 @@ body {
     outline: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    max-width: 500px; 
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -16,9 +16,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* ========== Component Styles ========== */
-
-/* --- Logo and Search Bar --- */
+/* Logo and Search Bar */
 .header-row {
     display: flex;
     justify-content: center;
@@ -38,7 +36,13 @@ body {
     width: 100%;
 }
 
-/* --- Sidebar --- */
+.search-icon {
+    font-size: 20px;
+    color: #333;
+    margin-right: 10px;
+}
+
+/* Sidebar */
 .list-group {
     background-color: #F4E9BE;
     border-radius: 5px;
@@ -50,6 +54,12 @@ body {
     border: none;
     border-top: none;
     color: black;
+}
+
+.list-group-item.active {
+    background-color: #DAA520 !important;
+    border-color: #DAA520 !important;
+    color: #333;
 }
 
 .list-group-item:last-child {
@@ -73,11 +83,7 @@ body {
     margin-bottom: 24px;
 }
 
-.btn-primary i {
-    color: black;
-}
-
-/* --- Inbox --- */
+/* Inbox */
 .inbox-item {
     background-color: #F4E9BE;
     border-radius: 10px;
@@ -114,24 +120,25 @@ body {
     font-size: 20px;
 }
 
-/* --- Email Content --- */
+/* Email Content */
 .email-content {
     background-color: #F6F6F6;
     border-radius: 10px;
     padding: 15px;
+    position: relative;
 }
 
 .close-btn {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 10px;
+    top: 1px;
     cursor: pointer;
     font-size: 24px;
 }
 
-/* --- Other --- */
+/* Other Styles */
 .col-md-3 {
-    flex: 0 0 20%; 
+    flex: 0 0 20%;
     max-width: 15%;
 }
 
@@ -143,7 +150,7 @@ body {
     color: black;
 }
 
-/* ========== Responsive ========== */
+/* Responsive Styles */
 @media (max-width: 576px) {
     .form-control {
         width: 90%;
@@ -151,6 +158,10 @@ body {
 
     .btn-primary {
         width: 90%;
+    }
+
+    .search-icon {
+        font-size: 16px;
     }
 }
 
